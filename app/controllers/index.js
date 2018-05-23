@@ -4,7 +4,7 @@ export default Controller.extend({
 	headerMessage: 'Coming Soon',
 	responseMessage: '',
 	emailAddress: '',
-	isValid: match('emailAddress', /^.+@.+ \. .+$/),
+	isValid: match('emailAddress',/^.+@.+\..+$/),
 	isDisabled: not('isValid'),
 	actions: {
 		saveInvitation() {
