@@ -16,7 +16,6 @@ html {
 .label-fade {
   margin: 10px;
   opacity: 0;
-  @include transition(all 0.5s);
   &.label-show {
     opacity: 1;
   }
@@ -30,9 +29,9 @@ html {
 .page-footer {
   padding: 20px;
   margin-top: 50px;
-  color: darken($brand-primary, 50);
-  background-color: lighten($brand-primary, 45);
-  border-top: 1px solid lighten($brand-primary, 30);
+  color: 'red';
+  background-color: "blue";
+  border-top: 1px solid black;
 }
 
 .vtop {
