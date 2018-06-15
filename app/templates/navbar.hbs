@@ -21,14 +21,18 @@
       <ul class="nav navbar-nav navbar-right">
         {{#nav-link-to 'about'}}About{{/nav-link-to}}
         {{#nav-link-to 'contact'}}Contact{{/nav-link-to}}
+        {{#nav-link-to 'login'}}Login{{/nav-link-to}}
         <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin<span
+            {{#if session.isAuthenticated}}
+              <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin<span
               class="caret"></span></a>
-          <ul class="dropdown-menu">
-            {{#nav-link-to 'admin.invitations'}}Invitations{{/nav-link-to}}
-            {{#nav-link-to 'admin.contacts'}}Contacts{{/nav-link-to}}
-            {{#nav-link-to 'admin.seeder'}}Seeder{{/nav-link-to}}
-          </ul>
+              <ul class="dropdown-menu">
+                {{#nav-link-to 'login'}}Login{{/nav-link-to}}
+                {{#nav-link-to 'admin.invitations'}}Invitations{{/nav-link-to}}
+                {{#nav-link-to 'admin.contacts'}}Contacts{{/nav-link-to}}
+                {{#nav-link-to 'admin.seeder'}}Seeder{{/nav-link-to}}
+              </ul>
+            {{/if}}
         </li>
       </ul>
     </div><!-- /.navbar-collapse -->
