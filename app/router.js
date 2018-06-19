@@ -9,10 +9,10 @@ const Router = EmberRouter.extend({
 Router.map(function() {
   this.route('about');
   this.route('contact');
-  this.route('admin', function() {
-    this.route('invitations');
-    this.route('contacts');
-    this.route('seeder');
+  this.authenticatedRoute('admin', function() {
+    this.authenticatedRoute('invitations');
+    this.authenticatedRoute('contacts');
+    this.authenticatedRoute('seeder');
   });
 
   this.route('libraries', function() {
